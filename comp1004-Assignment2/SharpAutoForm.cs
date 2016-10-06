@@ -31,5 +31,10 @@ namespace comp1004_Assignment2
         {
 
         }
+
+        private void SteroSystemRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

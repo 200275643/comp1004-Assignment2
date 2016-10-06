@@ -45,14 +45,16 @@
             this.CalculateButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.AdditionalItemsLabel = new System.Windows.Forms.Label();
             this.SteroSystemRadioButton = new System.Windows.Forms.RadioButton();
             this.LatherInteriorButton = new System.Windows.Forms.RadioButton();
             this.ComputerNavigationRadioButton = new System.Windows.Forms.RadioButton();
-            this.ExteriorFinishLabel = new System.Windows.Forms.Label();
             this.StandardRadioButton = new System.Windows.Forms.RadioButton();
             this.PearlizedRadioButton = new System.Windows.Forms.RadioButton();
             this.CustomizedDetailingRadioButton = new System.Windows.Forms.RadioButton();
+            this.AddditionalOptionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ExteriorFinishGroupBox = new System.Windows.Forms.GroupBox();
+            this.AddditionalOptionsGroupBox.SuspendLayout();
+            this.ExteriorFinishGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // BasePriceLabel
@@ -196,30 +198,22 @@
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
             // 
-            // AdditionalItemsLabel
-            // 
-            this.AdditionalItemsLabel.AutoSize = true;
-            this.AdditionalItemsLabel.Location = new System.Drawing.Point(370, 58);
-            this.AdditionalItemsLabel.Name = "AdditionalItemsLabel";
-            this.AdditionalItemsLabel.Size = new System.Drawing.Size(81, 13);
-            this.AdditionalItemsLabel.TabIndex = 17;
-            this.AdditionalItemsLabel.Text = "Additional Items";
-            // 
             // SteroSystemRadioButton
             // 
             this.SteroSystemRadioButton.AutoSize = true;
-            this.SteroSystemRadioButton.Location = new System.Drawing.Point(373, 112);
+            this.SteroSystemRadioButton.Location = new System.Drawing.Point(24, 32);
             this.SteroSystemRadioButton.Name = "SteroSystemRadioButton";
             this.SteroSystemRadioButton.Size = new System.Drawing.Size(88, 17);
             this.SteroSystemRadioButton.TabIndex = 18;
             this.SteroSystemRadioButton.TabStop = true;
             this.SteroSystemRadioButton.Text = "Stero Syatem";
             this.SteroSystemRadioButton.UseVisualStyleBackColor = true;
+            this.SteroSystemRadioButton.CheckedChanged += new System.EventHandler(this.SteroSystemRadioButton_CheckedChanged);
             // 
             // LatherInteriorButton
             // 
             this.LatherInteriorButton.AutoSize = true;
-            this.LatherInteriorButton.Location = new System.Drawing.Point(373, 145);
+            this.LatherInteriorButton.Location = new System.Drawing.Point(24, 69);
             this.LatherInteriorButton.Name = "LatherInteriorButton";
             this.LatherInteriorButton.Size = new System.Drawing.Size(96, 17);
             this.LatherInteriorButton.TabIndex = 19;
@@ -230,7 +224,7 @@
             // ComputerNavigationRadioButton
             // 
             this.ComputerNavigationRadioButton.AutoSize = true;
-            this.ComputerNavigationRadioButton.Location = new System.Drawing.Point(373, 178);
+            this.ComputerNavigationRadioButton.Location = new System.Drawing.Point(24, 112);
             this.ComputerNavigationRadioButton.Name = "ComputerNavigationRadioButton";
             this.ComputerNavigationRadioButton.Size = new System.Drawing.Size(124, 17);
             this.ComputerNavigationRadioButton.TabIndex = 20;
@@ -238,20 +232,10 @@
             this.ComputerNavigationRadioButton.Text = "Computer Navigation";
             this.ComputerNavigationRadioButton.UseVisualStyleBackColor = true;
             // 
-            // ExteriorFinishLabel
-            // 
-            this.ExteriorFinishLabel.AutoSize = true;
-            this.ExteriorFinishLabel.Location = new System.Drawing.Point(370, 218);
-            this.ExteriorFinishLabel.Name = "ExteriorFinishLabel";
-            this.ExteriorFinishLabel.Size = new System.Drawing.Size(72, 13);
-            this.ExteriorFinishLabel.TabIndex = 21;
-            this.ExteriorFinishLabel.Text = "Exterior Finish";
-            this.ExteriorFinishLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
             // StandardRadioButton
             // 
             this.StandardRadioButton.AutoSize = true;
-            this.StandardRadioButton.Location = new System.Drawing.Point(373, 247);
+            this.StandardRadioButton.Location = new System.Drawing.Point(6, 29);
             this.StandardRadioButton.Name = "StandardRadioButton";
             this.StandardRadioButton.Size = new System.Drawing.Size(68, 17);
             this.StandardRadioButton.TabIndex = 22;
@@ -262,7 +246,7 @@
             // PearlizedRadioButton
             // 
             this.PearlizedRadioButton.AutoSize = true;
-            this.PearlizedRadioButton.Location = new System.Drawing.Point(373, 289);
+            this.PearlizedRadioButton.Location = new System.Drawing.Point(6, 83);
             this.PearlizedRadioButton.Name = "PearlizedRadioButton";
             this.PearlizedRadioButton.Size = new System.Drawing.Size(68, 17);
             this.PearlizedRadioButton.TabIndex = 23;
@@ -273,7 +257,7 @@
             // CustomizedDetailingRadioButton
             // 
             this.CustomizedDetailingRadioButton.AutoSize = true;
-            this.CustomizedDetailingRadioButton.Location = new System.Drawing.Point(373, 327);
+            this.CustomizedDetailingRadioButton.Location = new System.Drawing.Point(6, 122);
             this.CustomizedDetailingRadioButton.Name = "CustomizedDetailingRadioButton";
             this.CustomizedDetailingRadioButton.Size = new System.Drawing.Size(123, 17);
             this.CustomizedDetailingRadioButton.TabIndex = 24;
@@ -281,19 +265,37 @@
             this.CustomizedDetailingRadioButton.Text = "Customized Detailing";
             this.CustomizedDetailingRadioButton.UseVisualStyleBackColor = true;
             // 
+            // AddditionalOptionsGroupBox
+            // 
+            this.AddditionalOptionsGroupBox.Controls.Add(this.SteroSystemRadioButton);
+            this.AddditionalOptionsGroupBox.Controls.Add(this.LatherInteriorButton);
+            this.AddditionalOptionsGroupBox.Controls.Add(this.ComputerNavigationRadioButton);
+            this.AddditionalOptionsGroupBox.Location = new System.Drawing.Point(311, 12);
+            this.AddditionalOptionsGroupBox.Name = "AddditionalOptionsGroupBox";
+            this.AddditionalOptionsGroupBox.Size = new System.Drawing.Size(186, 146);
+            this.AddditionalOptionsGroupBox.TabIndex = 25;
+            this.AddditionalOptionsGroupBox.TabStop = false;
+            this.AddditionalOptionsGroupBox.Text = "Additional Options";
+            // 
+            // ExteriorFinishGroupBox
+            // 
+            this.ExteriorFinishGroupBox.Controls.Add(this.CustomizedDetailingRadioButton);
+            this.ExteriorFinishGroupBox.Controls.Add(this.PearlizedRadioButton);
+            this.ExteriorFinishGroupBox.Controls.Add(this.StandardRadioButton);
+            this.ExteriorFinishGroupBox.Location = new System.Drawing.Point(335, 175);
+            this.ExteriorFinishGroupBox.Name = "ExteriorFinishGroupBox";
+            this.ExteriorFinishGroupBox.Size = new System.Drawing.Size(161, 179);
+            this.ExteriorFinishGroupBox.TabIndex = 26;
+            this.ExteriorFinishGroupBox.TabStop = false;
+            this.ExteriorFinishGroupBox.Text = "Exterior Finish";
+            // 
             // SharpAutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 460);
-            this.Controls.Add(this.CustomizedDetailingRadioButton);
-            this.Controls.Add(this.PearlizedRadioButton);
-            this.Controls.Add(this.StandardRadioButton);
-            this.Controls.Add(this.ExteriorFinishLabel);
-            this.Controls.Add(this.ComputerNavigationRadioButton);
-            this.Controls.Add(this.LatherInteriorButton);
-            this.Controls.Add(this.SteroSystemRadioButton);
-            this.Controls.Add(this.AdditionalItemsLabel);
+            this.Controls.Add(this.ExteriorFinishGroupBox);
+            this.Controls.Add(this.AddditionalOptionsGroupBox);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.CalculateButton);
@@ -313,6 +315,10 @@
             this.Controls.Add(this.BasePriceLabel);
             this.Name = "SharpAutoForm";
             this.Text = "Auto Center";
+            this.AddditionalOptionsGroupBox.ResumeLayout(false);
+            this.AddditionalOptionsGroupBox.PerformLayout();
+            this.ExteriorFinishGroupBox.ResumeLayout(false);
+            this.ExteriorFinishGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,14 +343,14 @@
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Label AdditionalItemsLabel;
         private System.Windows.Forms.RadioButton SteroSystemRadioButton;
         private System.Windows.Forms.RadioButton LatherInteriorButton;
         private System.Windows.Forms.RadioButton ComputerNavigationRadioButton;
-        private System.Windows.Forms.Label ExteriorFinishLabel;
         private System.Windows.Forms.RadioButton StandardRadioButton;
         private System.Windows.Forms.RadioButton PearlizedRadioButton;
         private System.Windows.Forms.RadioButton CustomizedDetailingRadioButton;
+        private System.Windows.Forms.GroupBox AddditionalOptionsGroupBox;
+        private System.Windows.Forms.GroupBox ExteriorFinishGroupBox;
     }
 }
 
