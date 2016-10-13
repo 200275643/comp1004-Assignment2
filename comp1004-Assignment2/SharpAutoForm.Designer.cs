@@ -184,7 +184,7 @@
             // 
             // CalculateButton
             // 
-            this.CalculateButton.Location = new System.Drawing.Point(12, 299);
+            this.CalculateButton.Location = new System.Drawing.Point(29, 299);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(75, 23);
             this.CalculateButton.TabIndex = 14;
@@ -193,7 +193,7 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(135, 299);
+            this.ClearButton.Location = new System.Drawing.Point(152, 299);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(75, 23);
             this.ClearButton.TabIndex = 15;
@@ -202,7 +202,7 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(256, 299);
+            this.ExitButton.Location = new System.Drawing.Point(276, 299);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(94, 23);
             this.ExitButton.TabIndex = 16;
